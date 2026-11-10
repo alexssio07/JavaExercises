@@ -16,11 +16,11 @@ public class Es0103_DivisioniECast {
         System.out.println('A' + 1); // 'A1' (KO) -> 66 (OK)
         System.out.println((char) ('A' + 1)); // 'A1' KO -> 'B' (OK)
         try {
-        System.out.println(10 / 0); // 0 o errore
-        System.out.println(10.0 / 0); // 0 o errore
+            System.out.println(10 / 0); // 0 o errore
+            System.out.println(10.0 / 0); // 0 o errore
 
+        } catch (ArithmeticException e) {
         }
-        catch (ArithmeticException e) {}
 
     }
 }

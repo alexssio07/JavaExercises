@@ -11,10 +11,13 @@ public class PrimoApproccio {
         PLATEA(new BigDecimal("1.5"));
 
         private final BigDecimal prezzo;
-        Fascia(BigDecimal prezzo) { this.prezzo = prezzo; }
+
+        Fascia(BigDecimal prezzo) {
+            this.prezzo = prezzo;
+        }
     }
 
-    public static BigDecimal calcolaPrezzo(BigDecimal base , Fascia fascia) {
+    public static BigDecimal calcolaPrezzo(BigDecimal base, Fascia fascia) {
         return base.multiply(fascia.prezzo);
     }
 
@@ -32,9 +35,9 @@ public class PrimoApproccio {
 
     public static void main(String[] args) {
         Posto p = new Posto("A12", Stato.LIBERO, new BigDecimal("50"));
-        System.out.println("Costo biglietto BASE "+ calcolaPrezzo(new BigDecimal("10.9"), Fascia.BASE));
-        System.out.println("Costo biglietto VIP "+ calcolaPrezzo(new BigDecimal("10.9"), Fascia.VIP));
-        System.out.println("Costo biglietto PLATEA "+ calcolaPrezzo(new BigDecimal("10.9"), Fascia.PLATEA));
+        System.out.println("Costo biglietto BASE " + calcolaPrezzo(new BigDecimal("10.9"), Fascia.BASE));
+        System.out.println("Costo biglietto VIP " + calcolaPrezzo(new BigDecimal("10.9"), Fascia.VIP));
+        System.out.println("Costo biglietto PLATEA " + calcolaPrezzo(new BigDecimal("10.9"), Fascia.PLATEA));
         System.out.println(descrivi(p));
     }
 }
